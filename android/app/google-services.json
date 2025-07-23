@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "588168558953",
+    "project_id": "paraguay-courier",
+    "storage_bucket": "paraguay-courier.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588168558953:android:eae68754e94dd1cb2e25f8",
+        "android_client_info": {
+          "package_name": "com.mdellosa.pcourier"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG5Pymsb56BHu3U_fwxlNd_-8eN_nwwTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

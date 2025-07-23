@@ -1,0 +1,35 @@
+
+workflows:
+  build_ios_app:
+    name: Build iOS for Paraguay Courier
+    instance_type: mac_mini_m2
+    environment:
+      vars:
+        PACKAGE_NAME: "com.traedeusa.paraguaycourier"
+        APP_NAME: "Paraguay Courier"
+      xcode: 15.0
+      cocoapods: default
+      node: 18.20.0
+    triggering:
+      events:
+        - push
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm install -g @ionic/cli
+          npm ci
+      - name: Build Angular App
+        script: |
+          npm run build
+      - name: Copy Web Assets
+        script: |
+          npx cap copy ios
+      - name: Sync Capacitor
+        script: |
+          npx cap sync ios
+      - name: Build Xcode project
+        script: |
+          cd ios
+          xcodebuild -workspace App.xcworkspace -scheme App -configuration Release -sdk iphoneos -archivePath $HOME/output/App.xcarchive archive
+    artifacts:
+      - build/ios/ipa/*.ipa

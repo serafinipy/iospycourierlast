@@ -1,0 +1,7 @@
+{
+  "name": "Paraguay Courier",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

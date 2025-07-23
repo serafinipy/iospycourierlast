@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Paraguay Courier</string>
+    <string name="title_activity_main">Paraguay Courier</string>
+    <string name="package_name">com.mdellosa.pcourier</string>
+    <string name="custom_url_scheme">com.mdellosa.pcourier</string>
+</resources>
