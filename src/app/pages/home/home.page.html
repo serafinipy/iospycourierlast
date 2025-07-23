@@ -1,0 +1,76 @@
+<ion-content>
+
+  <div>
+    <div class="logo-container">
+      <img src="assets/images/logo-pyc-blanco-2.png" alt="logo" width="80%" />
+    </div>
+
+    <form  class="bg-form-gradient box-container" [formGroup]="formGroup" (ngSubmit)="onLogin()">
+      <div class="align-center">
+        <label class="titleText">Inicia Sesión</label>
+      </div>
+      <div >
+        <ion-input
+          id="email"
+          label="Email o Nro de Casillero"
+          name="email" 
+          formControlName="email" 
+          labelPlacement="floating"
+          class="input-login"
+        >
+        </ion-input>
+        <ion-text class="textError" 
+        *ngIf="formGroup.get('email')?.hasError('email') && formGroup.get('email')?.touched"
+        
+        >
+          Por favor, introduce un correo electrónico o nro de casillero.
+        </ion-text>
+
+        <div style="display: flex;">
+          <ion-input
+          #passwordInput 
+          id="password"
+          label="Contraseña"          
+          labelPlacement="floating"
+          class="input-login"
+          style="width: 90%;"
+          type="{{ passwordFieldType }}" 
+          name="password" 
+          formControlName="password" 
+        >
+        </ion-input>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <ion-icon name="{{ eyeIcon }}" slot="end" (click)="togglePasswordVisibility()" class="custom-icon" ></ion-icon>      
+        </div>
+        
+
+        </div>
+        <ion-text class="textError" *ngIf="formGroup.get('password')?.hasError('required') && formGroup.get('password')?.touched">
+          La contraseña es requerida.
+        </ion-text>
+      </div>
+      <div class="mt-5 align-right">
+        <label class="forgot-pass" routerLink="/forgot-password"> ¿Olvidaste la contraseña?</label>
+      </div>
+      <div class="mt-5">
+        <ion-button 
+          expand="full" 
+          class="buttonStyle" 
+          style="--background:#c80c24;"  
+          type="submit"    
+          [disabled]="!formGroup.valid"
+                      
+        >
+          Iniciar Sesión
+        </ion-button>
+      </div>
+      <div class="align-center mt-5">
+        <div >
+
+          <label class="text-register" > ¿No tienes una cuenta?.</label>
+          <label  class="text-register-bold" routerLink="/register" > Regístrate</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</ion-content>

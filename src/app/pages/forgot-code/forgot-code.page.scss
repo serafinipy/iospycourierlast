@@ -1,0 +1,70 @@
+.box-container{
+    width: 80%;
+    margin: auto;
+  }
+  
+  .buttonStyle {
+    width: 100%;
+    height: 35px !important;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .forgot-pass{
+    color: rgb(212, 208, 208);
+  
+    
+  }
+  
+  .input-login{
+    --highlight-color-focused: red;  
+    --color: white;
+    border-bottom: 1px solid white;
+    margin-top: 5%;
+  }
+  
+  .logo-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+  
+  .text-register {
+    color: white;
+    font-size: 12px;
+  }
+  
+  
+  .text-register-bold {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    
+  }
+  
+  .toolbar-background {
+    border-style: none !important;
+    border-color: transparent !important;
+    background: transparent !important;
+  }
+  /****
+  
+  /*****************************************************************************************/
+  
+  ion-button {
+    min-height: 10px;
+    border-radius: none !important;
+  }
+  
+  ion-button.focus {
+    min-height: 10px;
+    border-radius: none !important;
+    background-color: green;
+  }
+  

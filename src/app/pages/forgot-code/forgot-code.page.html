@@ -1,0 +1,94 @@
+<ion-content>
+  <ion-header translucent>
+    <ion-toolbar color="transparent">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/forgot-password" text="Atrás"></ion-back-button>
+      </ion-buttons>
+      <!--<ion-title>{{ pageTitle }}</ion-title>-->
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-img src="assets/images/logo.png" style="width: 80px"></ion-img>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <div>
+    <div class="logo-container">
+      <img src="assets/images/logo-pyc-blanco-2.png" alt="logo" width="80%" />
+    </div>
+
+    <form
+    class="bg-form-gradient box-container"
+    [formGroup]="formGroup"
+    (ngSubmit)="openForgot()"
+  >
+    <div class="align-center">
+      <label class="titleText">Recuperar Contraseña</label>
+    </div>
+    <div>
+      <ion-input
+        id="code"
+        label="Código enviado"
+        
+        name="code"
+        formControlName="code"
+        labelPlacement="floating"
+        class="input-login"
+      >
+      </ion-input>
+      <ion-text
+        class="textError"
+        *ngIf="formGroup.get('code')?.hasError('codeMismatch') && formGroup.get('code')?.touched"
+            >
+        Por favor, ingresa el código enviado a tu correo electrónico.
+      </ion-text>
+
+      <ion-input
+      id="password"
+      formControlName="password"
+      label="Contraseña *"
+      labelPlacement="floating"
+      class="input-login"
+      type="password"
+    >
+    </ion-input>
+    <ion-text
+      class="textError"
+      *ngIf="formGroup.get('password')?.hasError('required') && formGroup.get('password')?.touched"
+    >
+      La contraseña es requerida.
+    </ion-text>
+
+    <ion-input
+      id="confirm_password"
+      label="Confirmar Contraseña *"
+      formControlName="confirm_password"
+      labelPlacement="floating"
+      class="input-login"
+      type="password"
+    >
+    </ion-input>
+    <ion-text
+      class="textError"
+      *ngIf="formGroup.get('confirm_password')?.hasError('mismatch') && formGroup.get('confirm_password')?.touched"
+    >
+      Las contraseñas no coinciden.
+    </ion-text>
+    </div>
+
+    <div class="mt-5">
+      <ion-button
+        expand="full"
+        class="buttonStyle"
+        style="--background: #c80c24"
+        type="submit"
+        [disabled]="!formGroup.valid"
+      >
+        Recuperar Contraseña
+      </ion-button>
+    </div>
+    <div class="align-center mt-5"></div>
+  </form>
+  </div>
+   
+</ion-content>

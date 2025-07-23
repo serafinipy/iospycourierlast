@@ -1,0 +1,107 @@
+.box-container{
+    width: 80%;
+    margin: auto;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Ajusta este margen según sea necesario */
+  }
+  
+  .buttonStyle {
+    width: 100%;
+    height: 35px !important;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+
+  .checkbox-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-left .checkbox-icon {
+    order: -1; /* Esto moverá el icono del checkbox a la izquierda */
+  }
+  .forgot-pass{
+    font-size: 12px;
+    color: rgb(212, 208, 208);
+    font-size: 12px;
+    
+  }
+  
+  .input-login{
+    --highlight-color-focused: red;  
+    --color: white;
+    border-bottom: 1px solid white;
+    margin-top: 5%;
+  }
+
+  #date-button {
+    /* Estilos que deseas aplicar */
+    background-color: blue !important;
+    color: white;
+    /* Agrega más estilos según sea necesario */
+  }
+  
+   ion-item {
+    --background: transparent;
+    display: block !important;
+ 
+  }
+  
+  .logo-container {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    // background-color: aqua;
+  }
+
+  .mt-10 {
+    margin-top: 10%;
+  }
+  
+  .text-register {
+    color: white;
+    font-size: 12px;
+  }
+  
+  
+  .text-register-bold {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    
+  }
+
+  ion-datetime-button::part(native) {
+    background: transparent;
+}
+
+
+  /*****************************************************************************************/
+  
+  ion-button {
+    min-height: 10px;
+    border-radius: none !important;
+  }
+  
+
+  .placeholder {
+    position: absolute;
+    pointer-events: none;
+    top: 12px;
+    left: 12px;
+    font-size: 14px;
+    color: #999; /* Puedes ajustar el color según tu diseño */
+  }
+  
+  ion-datetime.has-value + label {
+    display: none;
+  }
